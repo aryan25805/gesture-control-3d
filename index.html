@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Hand Tracing Particles</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <button id="info-btn" onclick="toggleModal()">?</button>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Controls</h2>
+            <ul>
+                <li>🖐 <b>Show Hand:</b> Particles form your hand shape.</li>
+                <li>🤏 <b>Pinch (Thumb+Index):</b> Zoom In.</li>
+                <li>👋 <b>Release Pinch:</b> Zoom Out.</li>
+                <li>📱 <b>Mobile:</b> Works best in Portrait mode.</li>
+            </ul>
+            <button onclick="toggleModal()">Close</button>
+        </div>
+    </div>
+
+    <video class="input_video"></video>
+    
+    <script src="script.js"></script>
+</body>
+</html>
